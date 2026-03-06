@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinh Kien Truong - CV</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #e6e9f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+        .cv-container {
+            max-width: 1000px;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        /* Left Column */
+        .left-column {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 20px;
+        }
+        .profile h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 10px;
+        }
+        .profile .subtitle {
+            font-size: 14px;
+            color: #b0c4de;
+            margin-bottom: 25px;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #4a90e2;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .details-item {
+            margin-bottom: 12px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        .details-item strong {
+            display: block;
+            font-weight: 600;
+            color: #4a90e2;
+            font-size: 13px;
+        }
+        .details-item .light {
+            color: #b0c4de;
+        }
+        .links a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-size: 13px;
+            display: inline-block;
+            margin-top: 5px;
+            word-break: break-all;
+        }
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill-tag {
+            background-color: #34495e;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            color: #ecf0f1;
+        }
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        .language-name {
+            font-weight: 500;
+        }
+        .language-level {
+            color: #b0c4de;
+        }
+        /* Right Column */
+        .right-column {
+            background-color: white;
+            padding: 30px 25px;
+        }
+        .right-section {
+            margin-bottom: 25px;
+        }
+        .right-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2c3e50;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .profile-text {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .job {
+            margin-bottom: 20px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        .job-title {
+            font-size: 15px;
+        }
+        .job-date {
+            font-size: 13px;
+            color: #7f8c8d;
+            font-weight: 400;
+        }
+        .job-company {
+            font-weight: 500;
+            color: #4a90e2;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .job-description {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .job-description li {
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 6px;
+            color: #333;
+            position: relative;
+            padding-left: 18px;
+        }
+        .job-description li::before {
+            content: "•";
+            color: #4a90e2;
+            font-weight: bold;
+            position: absolute;
+            left: 2px;
+        }
+        .education-item {
+            margin-bottom: 15px;
+        }
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .edu-title {
+            font-size: 14px;
+        }
+        .edu-date {
+            font-size: 13px;
+            color: #7f8c8d;
+            font-weight: 400;
+        }
+        .edu-school {
+            font-size: 13px;
+            color: #4a90e2;
+            margin-bottom: 3px;
+        }
+        .edu-website {
+            font-size: 11px;
+            color: #7f8c8d;
+            word-break: break-all;
+        }
+			@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+
+    body {
+        background: white;
+        padding: 0;
+        margin: 0;
+        display: block;
+    }
+
+    .cv-container {
+        box-shadow: none;
+        border-radius: 0;
+        width: 210mm;
+        min-height: 297mm;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <div class="profile">
+                <h1>Vinh Kien Truong</h1>
+                <div class="subtitle">Fullstack Web Developer</div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Details</div>
+                <div class="details-item">
+                    Chaussée de Wavre 1345<br>
+                    Auderghem, Bruxelles 1160<br>
+                    Belgium<br>
+                    +32470568643<br>
+                    vinhkientruong1994@gmail.com
+                </div>
+                <div class="details-item">
+                    <strong>Nationality</strong>
+                    Belgian
+                </div>
+                <div class="details-item">
+                    <strong>Driving License</strong>
+                    Yes
+                </div>
+                <div class="details-item">
+                    <strong>Date of Birth</strong>
+                    26/08/1994
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Links</div>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/vinh-kien-truong" target="_blank">https://www.linkedin.com/in/vinh-kien-truong</a>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Skills</div>
+                <div class="skills-tags">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">jQuery</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Express.js</span>
+                    <span class="skill-tag">Pug</span>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">Api Postman</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Oracle Database</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">Agile</span>
+                    <span class="skill-tag">Microsoft sql server</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Svn</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Languages</div>
+                <div class="language-item">
+                    <span class="language-name">French</span>
+                    <span class="language-level">Native</span>
+                </div>
+                <div class="language-item">
+                    <span class="language-name">English</span>
+                    <span class="language-level">B1</span>
+                </div>
+                <div class="language-item">
+                    <span class="language-name">Chinese</span>
+                    <span class="language-level">A2</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <div class="right-section">
+                <div class="right-title">Profile</div>
+                <div class="profile-text">
+                    Fullstack Web Developer with over four years of professional experience designing, developing, and customizing web-based applications, particularly within CRM environments. Strong expertise in JavaScript and SQL.
+                </div>
+                <div class="profile-text">
+                    Experienced in backend logic, database optimization, and full development lifecycle collaboration within Agile teams. I have an analytical thinking, problem-solving abilities, and a continuous learning mindset.
+                </div>
+                <div class="profile-text">
+                    I am currently expanding backend expertise through advanced Java training.
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="right-title">Employment History</div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title">Project Developer</span>
+                        <span class="job-date">Aug 2020 – Jun 2025</span>
+                    </div>
+                    <div class="job-company">Efficy, Brussels</div>
+                    <ul class="job-description">
+                        <li>Developed and customized CRM solutions using <b>JavaScript</b> and <b>Microsoft SQL Server</b>, adapting the platform to meet specific client business requirements.</li>
+                        <li>Integrated third-party services such as <b>Google Maps</b> API and <b>Mailchimp</b>, enhancing client marketing automation and geolocation features.</li>
+                        <li>Designed and implemented a custom website template for Colliers, including dynamic mapping functionality.</li>
+                        <li>Implemented and maintained Mailchimp integration for <b>Ligues des familles</b>, improving email communication workflows.</li>
+                        <li>Maintained and enhanced an existing <b>Twikey</b> payment integration for <b>Ligues des familles</b>, ensuring reliable subscription management and payment processing.</li>
+                        <li>Developed a process automation runner and invoicing workflow system for <b>APAQ-W</b>, improving operational efficiency and billing automation.</li>
+                        <li>Built dynamic product tree structures to display hierarchical product and sub-product relationships within CRM interfaces.</li>
+                        <li>Optimized and maintained CRM databases, improving query performance and ensuring data integrity.</li>
+                        <li>Provided technical troubleshooting and client support, resolving complex issues and ensuring system reliability.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title">Founder</span>
+                        <span class="job-date">2019</span>
+                    </div>
+                    <div class="job-company">Mirai Digital Solution, Brussels</div>
+                    <ul class="job-description">
+                        <li>Created web-based startup projects using Node.js and JavaScript</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title">Internship</span>
+                        <span class="job-date">2018</span>
+                    </div>
+                    <div class="job-company">Yp5 Software, Brussels</div>
+                    <ul class="job-description">
+                        <li>Developed user-friendly web interfaces and contributed to project delivery</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="right-title">Education</div>
+                
+                <div class="education-item">
+                    <div class="edu-header">
+                        <span class="edu-title">Java developer</span>
+                        <span class="edu-date">Feb 2026 – May 2026</span>
+                    </div>
+                    <div class="edu-school">Hack your future, Brussels</div>
+                    <div class="edu-website">Website: https://www.hackyourfuture.be/</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="edu-header">
+                        <span class="edu-title">Front end developer</span>
+                        <span class="edu-date">Sept 2025 – Jan 2026</span>
+                    </div>
+                    <div class="edu-school">Hack your future, Brussels</div>
+                    <div class="edu-website">Website: https://www.hackyourfuture.be/</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="edu-header">
+                        <span class="edu-title">Bachelor's Degree in Computer Science</span>
+                        <span class="edu-date">2013 – 2018</span>
+                    </div>
+                    <div class="edu-school">Institut Paul Lambin, Brussels</div>
+                    <div class="edu-website">Website: https://www.vinci.be/fr/formations/informatique-developpement-applications</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
